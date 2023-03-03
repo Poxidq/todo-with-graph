@@ -43,8 +43,8 @@ const createInnerTRPCContext = (opts: CreateContextOptions) => {
 };
 
 /**
- * This is the actual context you will use in your router. It will be used to
- * process every request that goes through your tRPC endpoint.
+ * This is where you define context which depends on the request, e.g. the user’s session. You request the session using the opts.req
+ * object, and then pass the session down to the createInnerTRPCContext function to create the final context.
  *
  * @see https://trpc.io/docs/context
  */
